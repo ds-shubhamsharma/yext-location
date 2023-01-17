@@ -8,7 +8,7 @@ import {
   TemplateProps,
   TemplateRenderProps,
 } from "@yext/pages";
-import axios from "axios";
+
 import * as React from "react";
 import Banner from "../components/banner";
 import Card from "../components/card";
@@ -117,26 +117,34 @@ const Location: Template<TemplateRenderProps> = ({
 
   // console.log("apiData",apiData);
 
-
-
   const [user, setUser] = React.useState([]);
 
   const fetchData = async () => {
-    const response = await fetch("https://liveapi-sandbox.yext.com/v2/accounts/me/entities?api_key=a0db4a91072ddad5224c6c293d85aed7&v=20230110&entityTypes=location");
+    const response = await fetch(
+      "https://liveapi-sandbox.yext.com/v2/accounts/me/entities?api_key=a0db4a91072ddad5224c6c293d85aed7&v=20230110&entityTypes=location"
+    );
     const data = await response.json();
     return setUser(data);
-  }
+  };
 
   React.useEffect(() => {
     fetchData();
-  },[])
-  
+  }, []);
 
+  // console.log('user', user)
 
   return (
     <>
       <Header />
       <Banner name={name} address={address} />
+
+      {/* {user && user?.map((data:any)=>{
+return (
+  <>
+  {console.log('data', data)}
+  </>
+)
+      })} */}
       <div className="centered-container">
         <div className="section">
           <div className="grid grid-cols-2 gap-x-10 gap-y-10">

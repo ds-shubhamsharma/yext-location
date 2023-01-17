@@ -8,7 +8,7 @@ const Details = (props: any) => {
   return (
     <>
       <div className="grid">
-        <div className="text-xl font-semibold">Store Details</div>
+        <div className="text-xl font-semibold">Location Details</div>
         <div className="grid grid-cols-2 py-4">
           <div>
             <Address address={address} />
