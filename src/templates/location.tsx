@@ -110,8 +110,8 @@ const Location: Template<TemplateRenderProps> = ({
             <div>
               <Card
                 name={
-                  <Details name={name}address={address} phone={mainPhone}></Details>
-                }
+                  <Details name={name}address={address} phone={mainPhone}/>
+                } item={""}
               />
             </div>
             {hours && (

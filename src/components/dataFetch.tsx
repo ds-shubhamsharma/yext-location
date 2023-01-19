@@ -17,7 +17,8 @@ const DataFetch = () => {
     fetchData();
   }, []);
 
-  console.log("data", data);
+
+  // console.log("data", data);
   return (
     <>
       {data?.response?.entities.map((items: any) => {

@@ -18,20 +18,7 @@ import LocationData from "../components/locationData";
 import "../index.css";
 
 export const config: TemplateConfig = {
-  stream: {
-    $id: "locator-data",
 
-    fields: ["id", "uid", "meta"],
-
-    filter: {
-      entityTypes: ["location"],
-    },
-
-    localization: {
-      locales: ["en"],
-      primary: false,
-    },
-  },
 };
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
@@ -39,9 +26,9 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return `index.html`;
 };
 
-export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
-  return [`index-old/${document.id.toString()}`];
-};
+// export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
+//   return [`index-old/${document.id.toString()}`];
+// };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   relativePrefixToRoot,
