@@ -14,7 +14,6 @@ import DataFetch from "../components/dataFetch";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import LocationData from "../components/locationData";
-
 import "../index.css";
 
 export const config: TemplateConfig = {
@@ -22,7 +21,6 @@ export const config: TemplateConfig = {
 };
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  //   return document.slug ? document.slug : `${document.id.toString()}`;
   return `index.html`;
 };
 
@@ -31,8 +29,6 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
 // };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
-  relativePrefixToRoot,
-  path,
   document,
 }): HeadConfig => {
   return {
@@ -68,9 +64,8 @@ const LocatorPage: Template<TemplateRenderProps> = ({ document }) => {
       <div className="centered-container">
         <div className="section">
           <DataFetch />
-
           <div className="grid grid-cols-2 gap-x-10 gap-y-10">
-            <LocationData/>
+            <LocationData />
           </div>
         </div>
       </div>

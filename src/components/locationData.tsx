@@ -21,7 +21,10 @@ const LocationData = () => {
       {data?.response?.entities.map((items: any) => {
         return (
           <>
-            <StaticMap latitude={items.cityCoordinate.latitude} longitude={items.cityCoordinate.longitude} />
+            <StaticMap
+              latitude={items.cityCoordinate.latitude}
+              longitude={items.cityCoordinate.longitude}
+            />
           </>
         );
       })}
