@@ -5,7 +5,7 @@ type Coordinates = {
   longitude: string;
 };
 
-const StaticMap = (props: Coorgdinates) => {
+const StaticMap = (props: Coordinates) => {
   // console.log(props)
   const { latitude, longitude } = props;
 

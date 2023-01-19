@@ -15,7 +15,7 @@ import Card from "../components/card";
 import Details from "../components/details";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import Hours from "../components/hours";
+import Hours from "../components/hours"; 
 import StaticMap from "../components/static-map";
 
 import "../index.css";
@@ -100,64 +100,23 @@ const Location: Template<TemplateRenderProps> = ({
     c_customField,
   } = document;
 
-  // const [apiData, setApiData] = React.useState([]);
-
-  // var config = {
-  //   method: "get",
-  //   url: "https://liveapi-sandbox.yext.com/v2/accounts/me/entities?api_key=a0db4a91072ddad5224c6c293d85aed7&v=20230110&entityTypes=location",
-  //   headers: {},
-  // };
-  // axios(config)
-  //   .then(function (response) {
-  //     setApiData(response?.data?.response?.entities);
-  //   })
-  //   .catch(function (error) {
-  //     console.log(error);
-  //   });
-
-  // console.log("apiData",apiData);
-
-  const [user, setUser] = React.useState([]);
-
-  const fetchData = async () => {
-    const response = await fetch(
-      "https://liveapi-sandbox.yext.com/v2/accounts/me/entities?api_key=a0db4a91072ddad5224c6c293d85aed7&v=20230110&entityTypes=location"
-    );
-    const data = await response.json();
-    return setUser(data);
-  };
-
-  React.useEffect(() => {
-    fetchData();
-  }, []);
-
-  // console.log('user', user)
-
   return (
     <>
       <Header />
       <Banner name={name} address={address} />
-
-      {/* {user && user?.map((data:any)=>{
-return (
-  <>
-  {console.log('data', data)}
-  </>
-)
-      })} */}
       <div className="centered-container">
         <div className="section">
           <div className="grid grid-cols-2 gap-x-10 gap-y-10">
             <div>
               <Card
-                title={<Details address={address} phone={mainPhone}></Details>}
-                item=""
+                name={
+                  <Details name={name}address={address} phone={mainPhone}></Details>
+                }
               />
             </div>
             {hours && (
-              <Card title={<Hours title={name} hours={hours} />} item="" />
+              <Card name={<Hours title={name} hours={hours} />} item="" />
             )}
-
             {yextDisplayCoordinate && (
               <StaticMap
                 latitude={yextDisplayCoordinate?.latitude}
@@ -165,7 +124,9 @@ return (
               />
             )}
             <Card
-              title={<p className="text-xl font-semibold">{`About ${name}`}</p>}
+              name={
+                <p className="text-xl font-semibold">{`About ${name}`}</p>
+              }
               item={description}
             />
             <div>
@@ -183,9 +144,10 @@ return (
           </div>
         </div>
       </div>
+      <div>
+      </div>
       <Footer />
     </>
   );
 };
-
 export default Location;

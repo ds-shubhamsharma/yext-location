@@ -1,20 +1,19 @@
 import * as React from "react";
 
 type CardProps = {
-  title: any;
-  item: string;
+  item: any;
+  name: any;
 };
 
-const Card = ({ title, item }: CardProps) => {
+const Card = ({ name, item}: CardProps) => {
   return (
     <>
       <div className="centered-container">
         <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
           <div className="p-5">
-            <a href="#">
-            </a>
+            <a href="#"></a>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              {title}
+              {name}
               {item}
             </p>
           </div>

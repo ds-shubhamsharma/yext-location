@@ -3,12 +3,12 @@ import Cta from "./cta";
 import { Address } from "@yext/pages/components";
 
 const Details = (props: any) => {
-  const { address, phone } = props;
+  const { address, phone,name } = props;
 
   return (
     <>
       <div className="grid">
-        <div className="text-xl font-semibold">Location Details</div>
+        <div className="text-xl font-semibold">{name}</div>
         <div className="grid grid-cols-2 py-4">
           <div>
             <Address address={address} />
