@@ -61,12 +61,13 @@ const LocatorPage: Template<TemplateRenderProps> = ({ document }) => {
       <Banner />
       <div className="centered-container">
         <div className="section">
-          {/* <div style={styles.scrollview}> */}
+          <div style={styles.scrollview}>
           <DataFetch />
+
+          </div>
+          <div className="grid grid-cols-2 gap-x-10 gap-y-10"></div>
           <LocationData />
 
-          {/* </div> */}
-          <div className="grid grid-cols-2 gap-x-10 gap-y-10"></div>
         </div>
       </div>
       <Footer />
@@ -78,8 +79,8 @@ export default LocatorPage;
 const styles = {
   scrollview: {
     height: "580px",
-    width: "250px",
-    border: "1px solid black",
+    width: "450px",
+    // border:"0px solid black",
     overflow: "auto",
   },
 };
