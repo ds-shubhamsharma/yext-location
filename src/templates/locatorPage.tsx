@@ -16,9 +16,7 @@ import Header from "../components/header";
 import LocationData from "../components/locationData";
 import "../index.css";
 
-export const config: TemplateConfig = {
-
-};
+export const config: TemplateConfig = {};
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return `index.html`;
@@ -60,18 +58,15 @@ const LocatorPage: Template<TemplateRenderProps> = ({ document }) => {
   return (
     <>
       <Header />
-      <Banner/>
+      <Banner />
       <div className="centered-container">
         <div className="section">
-        {/* <div style={styles.scrollview}> */}
+          {/* <div style={styles.scrollview}> */}
           <DataFetch />
           <LocationData />
 
           {/* </div> */}
-          <div className="grid grid-cols-2 gap-x-10 gap-y-10">
-           
-         
-          </div>
+          <div className="grid grid-cols-2 gap-x-10 gap-y-10"></div>
         </div>
       </div>
       <Footer />
@@ -80,11 +75,11 @@ const LocatorPage: Template<TemplateRenderProps> = ({ document }) => {
 };
 export default LocatorPage;
 
-const styles ={
-  scrollview:{
-    height:"580px",
-    width:"250px",
-    border:"1px solid black",
-    overflow:"auto"
-  }
-}
+const styles = {
+  scrollview: {
+    height: "580px",
+    width: "250px",
+    border: "1px solid black",
+    overflow: "auto",
+  },
+};

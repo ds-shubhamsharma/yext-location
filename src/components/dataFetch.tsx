@@ -25,7 +25,7 @@ const DataFetch = () => {
         console.log("items", items);
         return (
           <>
-          <Card item={<Details name={<a href={items.slug}>{items.name}</a>} address={items.address} phone={items.mainPhone}/>} name={""}/>
+         <a href={items.slug}> <Card item={<Details name={items.name} address={items.address} phone={items.mainPhone}/>} name={""}/></a>
         
           </>
         );
