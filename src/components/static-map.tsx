@@ -13,8 +13,8 @@ const StaticMap = (props: Coordinates) => {
     <>
       <img
         className="w-full"
-        width="300"
-        height="200"
+        width="100"
+        height="100"
         src={
           "https://maps.googleapis.com/maps/api/staticmap?center=" +
           `${latitude}` +
