@@ -8,7 +8,7 @@ import {
   TemplateProps,
   TemplateRenderProps,
 } from "@yext/pages";
-
+import { Link } from "@yext/pages/components";
 import * as React from "react";
 import Banner from "../components/banner";
 import Card from "../components/card";
@@ -133,7 +133,7 @@ const Location: Template<TemplateRenderProps> = ({
             />
             <div>
               <div className="text-xl font-semibold">
-                {<a href={c_customField?.name}>Click Here </a>}
+                {<Link href={c_customField?.name}>Click Here</Link>}
               </div>
               {c_customField?.image?.map((img: any) => {
                 return (

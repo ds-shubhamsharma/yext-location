@@ -19,14 +19,14 @@ const Slider=()=> {
           <img
             src={"assets/images/sli.avif"} 
             alt="First slide"
-            style={mystyle}
+            style={styles}
           />
         </div>
         <div className="item">
           <img
-            src={"assets/images/banner2.jpg"}
+            src={"assets/images/hub.jpg"}
             alt="Second slide"
-            style={mystyle}
+            style={styles}
           />
         </div>
       </OwlCarousel>
@@ -37,7 +37,7 @@ const Slider=()=> {
 
 export default Slider;
 
-const mystyle = {
+const styles = {
   width: "280px",
   margin: "auto",
 };

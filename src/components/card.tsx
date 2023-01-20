@@ -1,5 +1,4 @@
 import * as React from "react";
-
 type CardProps = {
   item: any;
   name: any;
@@ -19,6 +18,7 @@ const Card = ({ name, item}: CardProps) => {
           </div>
         </div>
       </div>
+
     </>
   );
 };

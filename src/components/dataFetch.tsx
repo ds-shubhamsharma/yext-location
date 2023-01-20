@@ -1,5 +1,5 @@
 import * as React from "react";
-import Card from "./card";
+import CardList from "./cardList";
 import Details from "./details";
 
 const DataFetch = () => {
@@ -12,21 +12,17 @@ const DataFetch = () => {
     const result = await response.json();
     return setData(result);
   };
-
   React.useEffect(() => {
     fetchData();
   }, []);
 
 
-  // console.log("data", data);
   return (
     <>
       {data?.response?.entities.map((items: any) => {
-        console.log("items", items);
         return (
           <>
-          <Card item={<Details name={<a href={items.slug}>{items.name}</a>} address={items.address} phone={items.mainPhone}/>} name={""}/>
-        
+          <CardList name={<Details name={items.name} address={items.address} phone={items.mainPhone}/>} item={items.slug}/>
           </>
         );
       })}

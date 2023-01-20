@@ -6,7 +6,6 @@ type Coordinates = {
 };
 
 const StaticMap = (props: Coordinates) => {
-  // console.log(props)
   const { latitude, longitude } = props;
 
   return (
