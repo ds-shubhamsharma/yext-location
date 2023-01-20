@@ -22,7 +22,7 @@ const DataFetch = () => {
   return (
     <>
       {data?.response?.entities.map((items: any) => {
-        // console.log("items", items);
+        console.log("items", items);
         return (
           <>
           <Card item={<Details name={<a href={items.slug}>{items.name}</a>} address={items.address} phone={items.mainPhone}/>} name={""}/>
