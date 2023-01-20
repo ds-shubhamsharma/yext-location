@@ -16,6 +16,7 @@ import Details from "../components/details";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Hours from "../components/hours"; 
+import Slider from "../components/slider";
 import StaticMap from "../components/static-map";
 
 import "../index.css";
@@ -104,6 +105,7 @@ const Location: Template<TemplateRenderProps> = ({
     <>
       <Header />
       <Banner name={name} address={address} />
+      {/* <Slider/> */}
       <div className="centered-container">
         <div className="section">
           <div className="grid grid-cols-2 gap-x-10 gap-y-10">

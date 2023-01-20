@@ -13,8 +13,16 @@ const links: Link[] = [
   },
   {
     label: "About",
-    url: "/turtlehead-tacos",
-  },
+    url: "#",
+  },    
+  {
+    label: "Faq",
+    url: "#",
+  }, 
+  {
+    label: "location",
+    url: "#",
+  }, 
 ];
 
 const Header = () => {
@@ -27,16 +35,16 @@ const Header = () => {
   ));
 
   return (
-    <div className="bg-blue-50" style={{backgroundColor:""}}>
+    <div className="" style={{backgroundColor:"#24262b"}}>
       <div className="centered-container">
         <nav className="py-6 flex items-center justify-between">
           <div className="flex gap-x-4 items-center">
-            <img
+            {/* <img
               src="https://cdn.fs.brandfolder.com/cache=expiry:604800/deY3VGFpSjC761Abjbfc"
               width="50"
               height="50"
-            ></img>
-            <div className="flex gap-x-4 text-sm font-semibold text-body">
+            ></img> */}
+            <div className="flex gap-x-4 text-sm font-semibold text-body" style={{color:"white",fontSize:"17px"}}>
               {linkDoms}
             </div>
           </div>
@@ -48,6 +56,7 @@ const Header = () => {
                 url="#"
                 style="text-white bg-orange shadow-xl"
               ></Cta> */}
+              
             </div>
           </div>
         </nav>
